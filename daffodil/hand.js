@@ -22,4 +22,4 @@ function findFinger(input){
     }
 
 }
-console.log(findFinger(13))
+console.log(findFinger(14))
