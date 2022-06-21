@@ -4,7 +4,7 @@ function printArrayValuesDelay(arr) {
   arr.forEach(async (item) => {
     await delayValue(item)
     // console.log(value)
-    // delayValue(item)
+    delayValue(item)
   })
 }
 
