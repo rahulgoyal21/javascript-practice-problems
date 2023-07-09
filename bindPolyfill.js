@@ -9,7 +9,7 @@ function getName(city, state) {
 
 const getName1 = getName.bind(obj, 'Bhiwani')
 
-getName1('Haryana')
+// getName1('Haryana')
 
 Function.prototype.myBind = function (...args) {
   const obj = this // this contain the functin on which bind is applied
