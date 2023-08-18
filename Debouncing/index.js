@@ -1,17 +1,18 @@
-let count=1;
-const apiCall=()=>{
-    console.log("Function called..",count++);
+let count = 1
+const apiCall = () => {
+  console.log('Function called..', count++)
 }
 
-const getData=(func,delay)=>{
-    let timer
-    return () => {
-        clearTimeout(timer)
-        timer = setTimeout(()=>{
-            func()
-        },delay)
-    }
+const getData = (func, delay) => {
+  let timer
+  return (...args) => {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => {
+      console.log(args)
+      func()
+    }, delay)
+  }
 }
-console.log("rahul")
 
-const debouncing = getData(apiCall,500)
+const debouncing = getData(apiCall, 2000)
+debouncing('hello')

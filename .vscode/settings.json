@@ -1,9 +1,9 @@
 {
-    "prettier.trailingComma": "none",
-  "prettier.semi": false,
+  "prettier.trailingComma": "none",
+  "prettier.semi": true,
   "prettier.tabWidth": 2,
   "editor.showUnused": true,
   "prettier.singleQuote": true,
   "prettier.printWidth": 120,
-  "prettier.jsxSingleQuote": true,
+  "prettier.jsxSingleQuote": true
 }

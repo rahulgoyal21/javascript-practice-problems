@@ -17,8 +17,6 @@ function ascendingSort(array, n) {
 
   console.log(obj)
   let sortedArray = []
-  //   let b = array.splice(0)
-  //   console.log(array, b)
   let properties = Object.keys(obj)
 
   for (let i = 0; i < obj[properties[0]]; i++) sortedArray.push(0)

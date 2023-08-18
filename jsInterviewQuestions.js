@@ -11,7 +11,7 @@ function test() {
 function test() {
   console.log('1')
   delay(1000)
-  console.log(2)
+  console.log('2')
 }
 //write delay function
 ===========
@@ -91,6 +91,75 @@ console.log(getEmployeeName());
 console.log(employee.getName());
 
 ============
+
+let me = {
+  name: 'John Snow',
+  inArrow: () => {
+    console.log('My name is ' + this.name)
+  },
+  inRegular() {
+    console.log('My name is ' + this.name)
+  }
+}
+me.inArrow()
+me.inRegular()
+
+==============
+
+console.log('54')
+const promise1 = new Promise((resolve, reject) => {
+  console.log(1)
+  resolve()
+  console.log(2)
+})
+
+const promise2 = new Promise((resolve, reject) => {
+  console.log(3)
+  resolve()
+  console.log(4)
+})
+
+Promise.all([promise1, promise2])
+  .then(() => console.log(6))
+  .catch((err) => console.log(err))
+
+
+==========
+
+function isExist(str) {
+  let obj = {
+    a: {
+      b: {
+        c: 10
+      },
+      h: 20
+    },
+    d: 0
+  }
+}
+
+isExist('a.b.c') //10
+isExist('a.h') //20
+isExist('a.b.d.h') //undefined
+
+============
+
+console.log('54')
+const promise1 = new Promise((resolve, reject) => {
+  console.log(1)
+  resolve()
+  console.log(2)
+})
+
+const promise2 = new Promise((resolve, reject) => {
+  console.log(3)
+  reject()
+  console.log(4)
+})
+
+Promise.all([promise1, promise2])
+  .then(() => console.log(6))
+  .catch((err) => console.log(err))
 
 
 

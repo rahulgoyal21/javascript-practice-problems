@@ -17,7 +17,6 @@ function secondLargest(arr) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] > max1st) {
       max2nd = max1st
-
       max1st = arr[i]
     } else if (arr[i] > max2nd && arr[i] !== max1st) {
       max2nd = arr[i]
