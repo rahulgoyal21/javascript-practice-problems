@@ -28,6 +28,9 @@ console.log('sum is', arr.myReduce1(sum1, 1));
 Array.prototype.myReduce = function (...args) {
   const callback = args[0];
   const arr = this;
+  /**
+   * condition for if acc is passed, otherwise first element of array is taken as acc
+   */
   let acc = args[1] || arr[0];
   if (arr === undefined || arr === null || !arr.length) throw new TypeError('Array is not valid');
   if (typeof callback !== 'function' || callback === undefined) throw new TypeError('Callback is not valid ');

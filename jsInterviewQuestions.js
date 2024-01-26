@@ -220,3 +220,21 @@ const circle = {
 };
 console.log(circle.diameter());
 console.log(circle.perimeter());
+
+=======
+
+let me = {
+  name: 'John Snow',
+  inArrow: () => {
+    console.log('My name is ' + this.name) 
+    /**
+     * in arrow function, 'this' take the reference from enclosing lexical context, in this enclosing
+     * is global window object, so it gave undefined
+     */
+  },
+  inRegular() {
+    console.log('My name is ' + this.name)
+  }
+}
+me.inArrow()
+me.inRegular()

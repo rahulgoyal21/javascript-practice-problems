@@ -8,7 +8,7 @@ const getData = (func, delay) => {
   return (...args) => {
     if (timer) clearTimeout(timer);
     timer = setTimeout(() => {
-      console.log(args);
+      console.log('🚀 ~ return ~ ...args:', ...args);
       func();
     }, delay);
   };
